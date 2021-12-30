@@ -29,3 +29,4 @@ For edit your presence in your game use this code (read the image next to it to 
 
 > **Note :** For use image in rich presence you need to upload them on your Discord developer game page (Rich Presence -> Art Assets)
 
+### **More advanced documentation coming soon.**
