@@ -24,11 +24,11 @@ public class DiscordRpcLibrary : ModuleRules
             PublicIncludePaths.Add(Path.Combine(BaseDirectory, "Include"));
 
             // Add the import library
-            PublicLibraryPaths.Add(lib);
+            PublicSystemLibraryPaths.Add(lib);
             PublicAdditionalLibraries.Add(Path.Combine(lib, "discord-rpc.lib"));
 
             // Dynamic
-            RuntimeDependencies.Add(new RuntimeDependency(Path.Combine(lib, "discord-rpc.dll")));
+            RuntimeDependencies.Add(Path.Combine(lib, "discord-rpc.dll"));
             PublicDelayLoadDLLs.Add("discord-rpc.dll");
         }
         else if (Target.Platform == UnrealTargetPlatform.Linux)
@@ -39,9 +39,9 @@ public class DiscordRpcLibrary : ModuleRules
             PublicIncludePaths.Add(Path.Combine(BaseDirectory, "Include"));
 
             // Add the import library
-            PublicLibraryPaths.Add(lib);
+            PublicSystemLibraryPaths.Add(lib);
             PublicAdditionalLibraries.Add(Path.Combine(lib, "libdiscord-rpc.so"));
-            RuntimeDependencies.Add(new RuntimeDependency(Path.Combine(lib, "libdiscord-rpc.so")));
+            RuntimeDependencies.Add(Path.Combine(lib, "libdiscord-rpc.so"));
         }
         else if (Target.Platform == UnrealTargetPlatform.Mac)
         {
@@ -51,9 +51,9 @@ public class DiscordRpcLibrary : ModuleRules
             PublicIncludePaths.Add(Path.Combine(BaseDirectory, "Include"));
 
             // Add the import library
-            PublicLibraryPaths.Add(lib);
+            PublicSystemLibraryPaths.Add(lib);
             PublicAdditionalLibraries.Add(Path.Combine(lib, "libdiscord-rpc.dylib"));
-            RuntimeDependencies.Add(new RuntimeDependency(Path.Combine(lib, "libdiscord-rpc.dylib")));
+            RuntimeDependencies.Add(Path.Combine(lib, "libdiscord-rpc.dylib"));
         }
     }
 }
