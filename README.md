@@ -5,7 +5,7 @@ This plugin is designed for users of unreal engine 5. It will help you to create
 ![ExampleFeed](https://user-images.githubusercontent.com/47295080/147773806-fbaae57b-51e7-400f-a1a4-88a92bd77bd4.png)
 
 
-# Installation
+## Installation
 
 1) Dowload this repostory
 2) Extract the repo
@@ -14,14 +14,14 @@ This plugin is designed for users of unreal engine 5. It will help you to create
 5) Create your application and copy your Application ID
 6) Open your project and enable the plugin
 
-# Initialization
+## Initialization
 
 In order to establish a connection with the application you have created before and the discord app 
 You need to create something like this in your **Game Instance**  : 
 
 ![InitDiscord](https://user-images.githubusercontent.com/47295080/147773538-c4ac76cd-2199-4a1a-af90-cc695d8c0386.png)
 
-# Nodes 
+## Nodes 
 
 For edit your presence in your game use this code (read the image next to it to understand the fields of the node) : 
 
