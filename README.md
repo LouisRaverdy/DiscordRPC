@@ -2,7 +2,7 @@
 
 This plugin is designed for users of unreal engine 5. It will help you to create a discord presence for your game like this : 
 
-![image](https://user-images.githubusercontent.com/47295080/147771176-59649a7f-c255-45fe-ba55-c563d949ef42.png)
+![ExampleFeed](https://user-images.githubusercontent.com/47295080/147773806-fbaae57b-51e7-400f-a1a4-88a92bd77bd4.png)
 
 
 # Installation
