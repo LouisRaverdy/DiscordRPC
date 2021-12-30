@@ -1,4 +1,4 @@
-// Copyright Epic Games, Inc. All Rights Reserved.d.
+// Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "DiscordRpc.h"
 #include "DiscordRpcPrivatePCH.h"
