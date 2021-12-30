@@ -1,3 +1,5 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
 #include "DiscordRpcBlueprint.h"
 #include "DiscordRpcPrivatePCH.h"
 #include "DiscordRpcBlueprint.h"
