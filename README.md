@@ -1,6 +1,6 @@
 # Discord plugin for Unreal Engine 5
 
-This plugin is designed for users of unreal engine 5. It will help you to create a discord presence for your game like this : 
+This plugin is designed for users of Unreal Engine 5. It will help you to create a discord presence for your game like this : 
 
 ![ExampleFeed](https://user-images.githubusercontent.com/47295080/147773806-fbaae57b-51e7-400f-a1a4-88a92bd77bd4.png)
 
