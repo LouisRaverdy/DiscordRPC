@@ -21,6 +21,8 @@ You need to create something like this in your **Game Instance**  :
 
 ![InitDiscord](https://user-images.githubusercontent.com/47295080/147773538-c4ac76cd-2199-4a1a-af90-cc695d8c0386.png)
 
+> **Note :** Make sure your Game Instance is defined as default in the Project Settings. (Project Settings -> Maps & Modes -> Game Instance Class)
+
 ## Nodes 
 
 For edit your presence in your game use this code (read the image next to it to understand the fields of the node) : 
