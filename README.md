@@ -23,6 +23,10 @@ You need to create something like this in your **Game Instance**  :
 
 > **Note :** Make sure your Game Instance is defined as default in the Project Settings. (Project Settings -> Maps & Modes -> Game Instance Class)
 
+For remove your presence when you exit the game you need to add this to your **Game Instance** :
+
+![shutdown](https://user-images.githubusercontent.com/47295080/192113957-b7675e3f-161d-4d23-bb98-e5ce6f48a586.png)
+
 ## Nodes 
 
 For edit your presence in your game use this code (read the image next to it to understand the fields of the node) : 
