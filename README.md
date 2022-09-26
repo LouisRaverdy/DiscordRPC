@@ -29,10 +29,10 @@ For remove your presence when you exit the game you need to add this to your **G
 
 ## Nodes 
 
-For edit your presence in your game use this code (read the image next to it to understand the fields of the node) : 
+To update your presence for your game, you can use this code (read the image next to it to understand the fields of the node) : 
 
 ![SetPresenceDiscord](https://user-images.githubusercontent.com/47295080/147773549-6f106fda-835d-4cff-97f8-c220627b2dbf.png)
 
-> **Note :** For use image in rich presence you need to upload them on your Discord developer game page (Rich Presence -> Art Assets)
+> **Note :** To use image in rich presence you need to upload them on your Discord developer game page (Rich Presence -> Art Assets)
 
 ### **More advanced documentation coming soon.**
