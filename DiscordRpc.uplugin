@@ -5,14 +5,14 @@
 	"FriendlyName": "Discord RPC",
 	"Description": "Wrap the Discord RPC library.",
 	"Category": "Messaging",
-	"CreatedBy": "Chris Marsh <chris@discordapp.com> and updated by Louis R.",
-	"CreatedByURL": "https://discordapp.com/",
+	"CreatedBy": "Chris Marsh & Louis Raverdy",
+	"CreatedByURL": "https://github.com/LouisRaverdy/DiscordPluginUE",
 	"DocsURL": "https://github.com/LouisRaverdy/DiscordPluginUE",
 	"MarketplaceURL": "",
 	"SupportURL": "https://github.com/LouisRaverdy/DiscordPluginUE",
 	"CanContainContent": true,
-	"IsBetaVersion": true,
-	"Installed": false,
+	"IsBetaVersion": false,
+	"Installed": true,
 	"Modules": [
 		{
 			"Name": "DiscordRpc",
