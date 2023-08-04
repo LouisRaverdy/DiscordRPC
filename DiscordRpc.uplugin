@@ -1,0 +1,27 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.1",
+	"FriendlyName": "Discord RPC",
+	"Description": "Wrap the Discord RPC library.",
+	"Category": "Messaging",
+	"CreatedBy": "Chris Marsh & Louis Raverdy",
+	"CreatedByURL": "https://github.com/LouisRaverdy/DiscordPluginUE",
+	"DocsURL": "https://github.com/LouisRaverdy/DiscordPluginUE",
+	"MarketplaceURL": "",
+	"SupportURL": "https://github.com/LouisRaverdy/DiscordPluginUE",
+	"EngineVersion": "5.2.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "DiscordRpc",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault",
+			"PlatformAllowList": [
+				"Win64",
+				"Mac"
+			]
+		}
+	]
+}
