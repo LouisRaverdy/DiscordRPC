@@ -10,16 +10,15 @@
 	"DocsURL": "https://github.com/LouisRaverdy/DiscordPluginUE",
 	"MarketplaceURL": "",
 	"SupportURL": "https://github.com/LouisRaverdy/DiscordPluginUE",
+	"EngineVersion": "5.2.0",
 	"CanContainContent": true,
-	"IsBetaVersion": false,
 	"Installed": true,
 	"Modules": [
 		{
 			"Name": "DiscordRpc",
 			"Type": "Runtime",
 			"LoadingPhase": "PreDefault",
-			"WhitelistPlatforms" :
-			[
+			"PlatformAllowList": [
 				"Win64",
 				"Mac"
 			]
