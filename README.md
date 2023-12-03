@@ -68,14 +68,19 @@ Finally, once we have set our basic/all presence we can send it to the discord A
 
 ## Deprecated
 
+### Shutdown:
+
 You'll no longer have to override event ```Shutdown``` as this is already done in code for you:  
 
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/543cfa32-c743-4d82-befa-423696cdb5c5)  
+
+### Start and End Timpstamps:
 
 You no longer have to manually set timestamps, this gets handled for you in the ```DiscordGameInstance``` class
 
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/8e4f7548-9187-4e7f-8943-db6138d3a32c)  
 
+There was also a issue with mismatched types for timestamps which caused the plugin to not work in packaged builds which has now been fixed also.
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/bedf7510-2d9d-40d1-9307-aaf6c72c0d37)  
 
 
