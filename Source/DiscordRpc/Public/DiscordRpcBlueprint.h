@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Misc/DateTime.h"
 #include "Engine.h"
 #include "DiscordRpcBlueprint.generated.h"
 
@@ -58,10 +59,14 @@ struct FDiscordRichPresence {
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
     FString details;
     // todo, timestamps are 64bit, does that even matter?
+    // ^ yes, it does.. ints have a max value of 2,147,483,647
+    // 64bit ints have a max value of 9,223,372,036,854,775,807
+    // so we need to use int64, not int or we'll get overflow errors
+    // resulting in the timestamps breaking rich presence - Lewis/Basic
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-    int startTimestamp = 0;
+    int64 startTimestamp = 0;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-    int endTimestamp = 0;
+    int64 endTimestamp = 0;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
     FString largeImageKey;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
@@ -94,6 +99,10 @@ class DISCORDRPC_API UDiscordRpc : public UObject {
     GENERATED_BODY()
 
 public:
+
+    UFUNCTION(BlueprintPure)
+        int64 GetStartTimeStamp() const {return FDateTime::Now().ToUnixTimestamp();}
+
     UFUNCTION(BlueprintCallable,
               meta = (DisplayName = "Initialize connection", Keywords = "Discord rpc"),
               Category = "Discord")
