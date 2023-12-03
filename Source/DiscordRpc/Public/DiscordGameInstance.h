@@ -65,4 +65,10 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void SetDiscordPresence(EDiscordPresenceState PresenceState);
+	UFUNCTION(BlueprintCallable)
+		void SetBasicPresence(FString instate, FString indetails, FString inlargeimagekey, FString inlargeimagetext);
+	UFUNCTION(BlueprintCallable)
+		void SetAllPresence(FString instate, FString indetails, FString inlargeimagekey, FString inlargeimagetext, FString insmallimagekey, FString insmallimagetext, FString inpartyid, FString inmatchsecret, FString injoinsecret, FString inspectatesecret, int inpartysize, int inpartymax, bool ininstance);
+	UFUNCTION(BlueprintCallable)
+		void SetAppIDs(FString inapplicationid, FString inoptionalsteamid);
 };

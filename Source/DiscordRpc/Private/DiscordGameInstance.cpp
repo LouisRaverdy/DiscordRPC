@@ -72,3 +72,34 @@ void UDiscordGameInstance::SetDiscordPresence(EDiscordPresenceState PresenceStat
 		}
 	}
 }
+
+void UDiscordGameInstance::SetBasicPresence(FString instate, FString indetails, FString inlargeimagekey, FString inlargeimagetext)
+{
+	State = instate;
+	Details = indetails;
+	LargeImageKey = inlargeimagekey;
+	LargeImageText = inlargeimagetext;
+}
+
+void UDiscordGameInstance::SetAllPresence(FString instate, FString indetails, FString inlargeimagekey, FString inlargeimagetext, FString insmallimagekey, FString insmallimagetext, FString inpartyid, FString inmatchsecret, FString injoinsecret, FString inspectatesecret, int inpartysize, int inpartymax, bool ininstance)
+{
+	State = instate;
+	Details = indetails;
+	LargeImageKey = inlargeimagekey;
+	LargeImageText = inlargeimagetext;
+	SmallImageKey = insmallimagekey;
+	SmallImageText = insmallimagetext;
+	PartyId = inpartyid;
+	MatchSecret = inmatchsecret;
+	JoinSecret = injoinsecret;
+	SpectateSecret = inspectatesecret;
+	PartySize = inpartysize;
+	PartyMax = inpartymax;
+	Instance = ininstance;
+}
+
+void UDiscordGameInstance::SetAppIDs(FString inapplicationid, FString inoptionalsteamid)
+{
+	ApplicationId = inapplicationid;
+	OptionalSteamID = inoptionalsteamid;
+}
