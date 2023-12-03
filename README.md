@@ -80,7 +80,6 @@ You no longer have to manually set timestamps, this gets handled for you in the 
 
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/8e4f7548-9187-4e7f-8943-db6138d3a32c)  
 
-There was also a issue with mismatched types for timestamps which caused the plugin to not work in packaged builds which has now been fixed also.
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/bedf7510-2d9d-40d1-9307-aaf6c72c0d37)  
 
-
+There was also a issue with mismatched types for timestamps which caused the plugin to not work in packaged builds which has now been fixed also.
