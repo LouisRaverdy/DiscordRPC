@@ -6,7 +6,7 @@ This plugin is designed for users of Unreal Engine 5. It will help you to create
 
 # Credits
 * LouisRaverdy (OP: https://github.com/LouisRaverdy/DiscordRPC)
- * Base plugin with Discord SDK intergation  
+  * Base plugin with Discord SDK intergation  
 * Lewis/CusYaBasic (Me)
   * 5.3 update
   * Fix type error with TimeStamps
