@@ -29,6 +29,7 @@ This plugin is designed for users of Unreal Engine 5. It will help you to create
 Version 5.3 has changed a little bit. it now has ```DiscordGameInstance``` class which handles most of the logic for you; streamlining the process, making it much faster to get up and running.
 
 1) You need to inherit your ```GameInstance``` class from ```DiscordGameInstance```:
+   
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/f7d660af-3a57-4d08-978f-544fcf96c670)
 
 1.B) If you're using unreals default ```GameInstance``` You'll need to create your own and inherit it from ```DiscordGameInstance``` then set your project to use that class in your project settings:  
@@ -39,11 +40,11 @@ Version 5.3 has changed a little bit. it now has ```DiscordGameInstance``` class
 
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/e5a3438a-33f2-4186-aa0f-7a7cf18d57ea)  
 
-(I called my instance ```I_GameInstance``` but just set it to whatever yours is called)  
+I called my instance ```I_GameInstance``` (but just set it to whatever yours is called):  
 
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/53fb7b6c-5097-43af-92d1-5f0dd3e72382)  
 
-2) Now that we are inheriting from ```DiscordGameInstance```, we can set out App IDs. Simpily override event ```init``` and call ```SetAppIDs``` while passing your IDs into the params.
+2) Now that we are inheriting from ```DiscordGameInstance```, we can set out App IDs. Simpily override event ```init``` and call ```SetAppIDs``` while passing your IDs into the params:
 > **Note :** AppID IS REQUIRED, Steam is OPTIONAL
 
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/bf1bee01-740f-4ca1-a002-468c765ce97e)
@@ -57,13 +58,16 @@ So anytime you need to update the presence info call any of these nodes:
 
 ## Set Discord Presence
 
-Finally, once we have set our basic/all presence we can send it to the discord API using ```SetDiscordPresence```.  
+Finally, once we have set our basic/all presence we can send it to the discord API using ```SetDiscordPresence```:  
+
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/6f7526fd-44e9-45a7-b0b1-bd2ed387ff78)  
 
-```SetDiscordPresence``` also has a clear function build into it to clear the presence during runtime if you need to switch it when you switch maps/activities  
+```SetDiscordPresence``` also has a clear function build into it to clear the presence during runtime if you need to switch it when you switch maps/activities:  
+
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/6cecf8c2-294b-46b7-8656-7297ec35ff6e)  
 
 ## Deprecated
 
-You'll no longer have to override event ```Shutdown``` as this is already done in code for your
+You'll no longer have to override event ```Shutdown``` as this is already done in code for you:  
+
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/543cfa32-c743-4d82-befa-423696cdb5c5)  
