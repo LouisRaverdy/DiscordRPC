@@ -19,8 +19,7 @@
 			"Type": "Runtime",
 			"LoadingPhase": "PreDefault",
 			"PlatformAllowList": [
-				"Win64",
-				"Mac"
+				"Win64"
 			]
 		}
 	]
