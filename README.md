@@ -57,10 +57,10 @@ So anytime you need to update the presence info call any of these nodes:
 
 ## Set Discord Presence
 
-Finally, once we have set our basic/all presence we can send it to the discord API using ```SetDiscordPresence```.
+Finally, once we have set our basic/all presence we can send it to the discord API using ```SetDiscordPresence```.  
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/6f7526fd-44e9-45a7-b0b1-bd2ed387ff78)  
 
-```SetDiscordPresence``` also has a clear function build into it to clear the presence during runtime if you need to switch it when you switch maps/activities
+```SetDiscordPresence``` also has a clear function build into it to clear the presence during runtime if you need to switch it when you switch maps/activities  
 ![image](https://github.com/CusYaBasic/DiscordRPC/assets/86253238/6cecf8c2-294b-46b7-8656-7297ec35ff6e)  
 
 ## Deprecated
