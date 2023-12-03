@@ -15,14 +15,14 @@ USTRUCT(BlueprintType)
 struct FDiscordUserData {
     GENERATED_USTRUCT_BODY()
 
-        UPROPERTY(BlueprintReadOnly, Category = "Discord")
-        FString userId;
     UPROPERTY(BlueprintReadOnly, Category = "Discord")
-        FString username;
+    FString userId;
     UPROPERTY(BlueprintReadOnly, Category = "Discord")
-        FString discriminator;
+    FString username;
     UPROPERTY(BlueprintReadOnly, Category = "Discord")
-        FString avatar;
+    FString discriminator;
+    UPROPERTY(BlueprintReadOnly, Category = "Discord")
+    FString avatar;
 };
 
 /**
@@ -31,9 +31,9 @@ struct FDiscordUserData {
 UENUM(BlueprintType)
 enum class EDiscordJoinResponseCodes : uint8
 {
-    DISCORD_REPLY_NO		UMETA(DisplayName = "No"),
-    DISCORD_REPLY_YES		UMETA(DisplayName = "Yes"),
-    DISCORD_REPLY_IGNORE	UMETA(DisplayName = "Ignore")
+	DISCORD_REPLY_NO		UMETA(DisplayName="No"),
+	DISCORD_REPLY_YES		UMETA(DisplayName="Yes"),
+	DISCORD_REPLY_IGNORE	UMETA(DisplayName="Ignore")
 };
 
 DECLARE_LOG_CATEGORY_EXTERN(Discord, Log, All);
@@ -54,41 +54,41 @@ USTRUCT(BlueprintType)
 struct FDiscordRichPresence {
     GENERATED_USTRUCT_BODY()
 
-        UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        FString state;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        FString details;
+    FString state;
+    UPROPERTY(BlueprintReadWrite, Category = "Discord")
+    FString details;
     // todo, timestamps are 64bit, does that even matter?
     // ^ yes, it does.. ints have a max value of 2,147,483,647
     // 64bit ints have a max value of 9,223,372,036,854,775,807
     // so we need to use int64, not int or we'll get overflow errors
     // resulting in the timestamps breaking rich presence - Lewis/Basic
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        int64 startTimestamp = 0;
+    int64 startTimestamp = 0;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        int64 endTimestamp = 0;
+    int64 endTimestamp = 0;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        FString largeImageKey;
+    FString largeImageKey;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        FString largeImageText;
+    FString largeImageText;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        FString smallImageKey;
+    FString smallImageKey;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        FString smallImageText;
+    FString smallImageText;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        FString partyId;
+    FString partyId;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        int partySize = 0;
+    int partySize = 0;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        int partyMax = 0;
+    int partyMax = 0;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        FString matchSecret;
+    FString matchSecret;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        FString joinSecret;
+    FString joinSecret;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        FString spectateSecret;
+    FString spectateSecret;
     UPROPERTY(BlueprintReadWrite, Category = "Discord")
-        bool instance = false;
+    bool instance = false;
 };
 
 /**
@@ -101,78 +101,78 @@ class DISCORDRPC_API UDiscordRpc : public UObject {
 public:
 
     UFUNCTION(BlueprintPure)
-        int64 GetStartTimeStamp() const { return FDateTime::Now().ToUnixTimestamp(); }
+        int64 GetStartTimeStamp() const {return FDateTime::Now().ToUnixTimestamp();}
 
     UFUNCTION(BlueprintCallable,
-        meta = (DisplayName = "Initialize connection", Keywords = "Discord rpc"),
-        Category = "Discord")
-        void Initialize(const FString& applicationId,
-            bool autoRegister,
-            const FString& optionalSteamId);
+              meta = (DisplayName = "Initialize connection", Keywords = "Discord rpc"),
+              Category = "Discord")
+    void Initialize(const FString& applicationId,
+                    bool autoRegister,
+                    const FString& optionalSteamId);
 
     UFUNCTION(BlueprintCallable,
-        meta = (DisplayName = "Shut down connection", Keywords = "Discord rpc"),
-        Category = "Discord")
-        void Shutdown();
+              meta = (DisplayName = "Shut down connection", Keywords = "Discord rpc"),
+              Category = "Discord")
+    void Shutdown();
 
     UFUNCTION(BlueprintCallable,
-        meta = (DisplayName = "Check for callbacks", Keywords = "Discord rpc"),
-        Category = "Discord")
-        void RunCallbacks();
+              meta = (DisplayName = "Check for callbacks", Keywords = "Discord rpc"),
+              Category = "Discord")
+    void RunCallbacks();
 
     UFUNCTION(BlueprintCallable,
-        meta = (DisplayName = "Send presence", Keywords = "Discord rpc"),
-        Category = "Discord")
-        void UpdatePresence();
+              meta = (DisplayName = "Send presence", Keywords = "Discord rpc"),
+              Category = "Discord")
+    void UpdatePresence();
 
     UFUNCTION(BlueprintCallable,
-        meta = (DisplayName = "Clear presence", Keywords = "Discord rpc"),
-        Category = "Discord")
-        void ClearPresence();
+              meta = (DisplayName = "Clear presence", Keywords = "Discord rpc"),
+              Category = "Discord")
+    void ClearPresence();
 
     UFUNCTION(BlueprintCallable,
-        meta = (DisplayName = "Respond to join request", Keywords = "Discord rpc"),
-        Category = "Discord")
-        void Respond(const FString& userId, int reply);
+              meta = (DisplayName = "Respond to join request", Keywords = "Discord rpc"),
+              Category = "Discord")
+    void Respond(const FString& userId, int reply);
 
     UPROPERTY(BlueprintReadOnly,
-        meta = (DisplayName = "Is Discord connected", Keywords = "Discord rpc"),
-        Category = "Discord")
-        bool IsConnected;
+              meta = (DisplayName = "Is Discord connected", Keywords = "Discord rpc"),
+              Category = "Discord")
+    bool IsConnected;
 
     UPROPERTY(BlueprintAssignable,
-        meta = (DisplayName = "On connection", Keywords = "Discord rpc"),
-        Category = "Discord")
-        FDiscordConnected OnConnected;
+              meta = (DisplayName = "On connection", Keywords = "Discord rpc"),
+              Category = "Discord")
+    FDiscordConnected OnConnected;
 
     UPROPERTY(BlueprintAssignable,
-        meta = (DisplayName = "On disconnection", Keywords = "Discord rpc"),
-        Category = "Discord")
-        FDiscordDisconnected OnDisconnected;
+              meta = (DisplayName = "On disconnection", Keywords = "Discord rpc"),
+              Category = "Discord")
+    FDiscordDisconnected OnDisconnected;
 
     UPROPERTY(BlueprintAssignable,
-        meta = (DisplayName = "On error message", Keywords = "Discord rpc"),
-        Category = "Discord")
-        FDiscordErrored OnErrored;
+              meta = (DisplayName = "On error message", Keywords = "Discord rpc"),
+              Category = "Discord")
+    FDiscordErrored OnErrored;
 
     UPROPERTY(BlueprintAssignable,
-        meta = (DisplayName = "When Discord user presses join", Keywords = "Discord rpc"),
-        Category = "Discord")
-        FDiscordJoin OnJoin;
+              meta = (DisplayName = "When Discord user presses join", Keywords = "Discord rpc"),
+              Category = "Discord")
+    FDiscordJoin OnJoin;
 
     UPROPERTY(BlueprintAssignable,
-        meta = (DisplayName = "When Discord user presses spectate", Keywords = "Discord rpc"),
-        Category = "Discord")
-        FDiscordSpectate OnSpectate;
+              meta = (DisplayName = "When Discord user presses spectate", Keywords = "Discord rpc"),
+              Category = "Discord")
+    FDiscordSpectate OnSpectate;
 
     UPROPERTY(BlueprintAssignable,
-        meta = (DisplayName = "When Discord another user sends a join request",
-            Keywords = "Discord rpc"),
-        Category = "Discord")
-        FDiscordJoinRequest OnJoinRequest;
+              meta = (DisplayName = "When Discord another user sends a join request",
+                      Keywords = "Discord rpc"),
+              Category = "Discord")
+    FDiscordJoinRequest OnJoinRequest;
 
     UPROPERTY(BlueprintReadWrite,
-        meta = (DisplayName = "Rich presence info", Keywords = "Discord rpc"),
-        Category = "Discord")
-        FDiscordRichPresence RichPresence;
+              meta = (DisplayName = "Rich presence info", Keywords = "Discord rpc"),
+              Category = "Discord")
+    FDiscordRichPresence RichPresence;
 };
